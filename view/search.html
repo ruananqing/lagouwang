@@ -7,6 +7,11 @@
 </div>
 
 <div app-tab list="tabList" tab-click="tClick(id, name)"></div>
-<div class="search-list" app-position-list data="positionList"></div>
+<div class="search-list" filter-obj="filterObj" app-position-list data="positionList"></div>
 <div app-foot></div>
 <div app-sheet select="sClick(id, name)" list="sheet.list" visible="sheet.visible"></div>
+<!--
+    sheet.js指令暴露list接口，(用于数据填充赋值)
+    这里的（list="sheet.list"）表示：
+    list接口与searhCtrl里$scope的sheet.list数据进行对接绑定
+-->
